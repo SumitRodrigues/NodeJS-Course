@@ -26,3 +26,7 @@
 // const getNotes = require('./notes.js')
 // const msg = getNotes()
 // console.log(msg)
+
+// #3) Importing NPM Modules
+
+const validator = require('validator')
