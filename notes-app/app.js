@@ -43,7 +43,11 @@
 //3. Use it to print the string "Success!" to the console in green
 //4. Test your work
 
+// import chalk from "chalk";
 
+// const chalk = require('chalk') 
+// console.log(chalk.green('Success!'));
+// console.log(chalk.red.bold.inverse('Updated'))
 
-
+// 
 
