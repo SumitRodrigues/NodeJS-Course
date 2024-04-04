@@ -67,4 +67,7 @@ if(command === 'add'){
     console.log('Removing notes!')
 }
 
+// 3. Argument Parsing with Yargs: Part 1
+
+
 
