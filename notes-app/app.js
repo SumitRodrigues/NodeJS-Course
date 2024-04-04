@@ -58,16 +58,65 @@ const chalk = require('chalk')
 
 //console.log(process.argv[2])
 
-const command = process.argv[2]
+// const command = process.argv[2]
 
-console.log(process.argv)
-if(command === 'add'){
-    console.log('Adding notes!')
-}else if (command === 'remove') {
-    console.log('Removing notes!')
-}
+// console.log(process.argv)
+// if(command === 'add'){
+//     console.log('Adding notes!')
+// }else if (command === 'remove') {
+//     console.log('Removing notes!')
+// }
 
 // 3. Argument Parsing with Yargs: Part 1
 
+const  yargs = require("yargs") //import yargs
 
+//console.log(process.argv)
 
+// Customize yargs version
+yargs.version("1.1.0");
+
+// Create add command
+yargs.command({
+    command: "add",
+    describe: "Add a new note",
+    handler: function () {
+        console.log("Adding a new Note.")
+    },
+})
+
+// Create remove command
+yargs.command({
+    command: "remove",
+    describe: "Remove a note",
+    handler: function () {
+        console.log("Removing the note.")
+    },
+})
+
+// Challenge: Add two new commands
+// 1. Setup command to support "list" command (print placeholder message for now)
+// 2. Setup command to support "read" command (print placeholder message for now)
+// 3. Test your work by running both commands and ensure correct output
+
+// Create list command
+yargs.command({
+    command: "list",
+    describe: "List your notes",
+    handler: function () {
+        console.log("Listing the notes.")
+    },
+})
+
+// Create read command
+yargs.command({
+    command: "read",
+    describe: "Read a note",
+    handler: function () {
+        console.log("Reading a note.")
+    },
+})
+
+// add, remove, read, list
+
+console.log(yargs.argv)
