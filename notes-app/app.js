@@ -23,7 +23,7 @@
 // 3. Export getNotes function
 // 4. From app.js, load in and call the function printing message to console
 
-// const getNotes = require('./notes.js')
+const getNotes = require('./notes.js')
 // const msg = getNotes()
 // console.log(msg)
 
@@ -46,11 +46,25 @@
 // import chalk from "chalk";
 
 const chalk = require('chalk') 
-console.log(chalk.green('Success!'));
-console.log(chalk.red.bold.inverse('Updated'))
+// console.log(chalk.green('Success!'));
+// console.log(chalk.red.bold.inverse('Updated'))
 
 // #5) Global npm Modules and Nodemon
 // sudo npm install nodemon@1.18.5 -g
 
+// File system and command line args (Notes App)
+// 1. Section Intro
+// 2. Getting Input from the user
+
+//console.log(process.argv[2])
+
+const command = process.argv[2]
+
+console.log(process.argv)
+if(command === 'add'){
+    console.log('Adding notes!')
+}else if (command === 'remove') {
+    console.log('Removing notes!')
+}
 
 
