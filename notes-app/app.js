@@ -29,4 +29,21 @@
 
 // #3) Importing NPM Modules
 
-const validator = require('validator')
+// const validator = require('validator')
+
+// console.log(validator.isEmail('xample.com'))
+// console.log(validator.isURL('https://sumit-rodrigues.netlify.app'))
+
+// #4) Printing in Color
+
+// Challenge: Use the chalk library in your project
+
+//1. Install version 2.4.1 of chalk
+//2. Load Chalk into app.js
+//3. Use it to print the string "Success!" to the console in green
+//4. Test your work
+
+
+
+
+
