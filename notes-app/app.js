@@ -45,9 +45,12 @@
 
 // import chalk from "chalk";
 
-// const chalk = require('chalk') 
-// console.log(chalk.green('Success!'));
-// console.log(chalk.red.bold.inverse('Updated'))
+const chalk = require('chalk') 
+console.log(chalk.green('Success!'));
+console.log(chalk.red.bold.inverse('Updated'))
 
-// 
+// #5) Global npm Modules and Nodemon
+// sudo npm install nodemon@1.18.5 -g
+
+
 
