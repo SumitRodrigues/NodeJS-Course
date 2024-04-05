@@ -77,13 +77,20 @@ const  yargs = require("yargs") //import yargs
 yargs.version("1.1.0");
 
 // Create add command
-yargs.command({
-    command: "add",
-    describe: "Add a new note",
-    handler: function () {
-        console.log("Adding a new Note.")
-    },
-})
+// yargs.command({
+//     command: "add",
+//     describe: "Add a new note",
+//     builder: {
+//         title: {
+//             describe: "Note title",
+//             demandOption: true, // Add this line if you want 'title' to be required
+//             type: 'string', // Add this line to ensure 'title' is treated as a string
+//         }
+//     },
+//     handler(argv) { // <-- Note the addition of the argv parameter
+//         console.log("Title: " + argv.title);
+//     }
+// })
 
 // Create remove command
 yargs.command({
@@ -119,4 +126,37 @@ yargs.command({
 
 // add, remove, read, list
 
-console.log(yargs.argv)
+//console.log(yargs.argv)
+
+// 4. Argument Parsing with Yargs: Part 2
+
+
+
+// Challenge: Add an option to yargs
+// 1. Setup a body option for the add command
+// 2. Configure a description, make it required, and for it to be string
+// 3. Log the body value in the handler function
+// 4. Test your work!
+
+yargs.command({
+    command: "add",
+    describe: "Add a new note",
+    builder: {
+        title: {
+            describe: "Note title",
+            demandOption: true, // Add this line if you want 'title' to be required
+            type: 'string', // Add this line to ensure 'title' is treated as a string
+        },
+        body: {
+            describe: "Body of the note",
+            demandOption: true,
+            type: 'string',
+        }
+    },
+    handler: function(argv) { // <-- Note the addition of the argv parameter
+        console.log("Title: " + argv.title);
+        console.log("Body: " + argv.body);
+    }
+})
+
+yargs.parse()
